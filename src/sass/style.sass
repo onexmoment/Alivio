@@ -1,0 +1,305 @@
+* 
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+$font_main: 'Lato'
+
+@mixin btn
+    background-color: #01996D
+    border: 1px solid #01996D
+    border-radius: 6px
+    font-family: $font_main
+    font-weight: 400
+    font-size: 20px
+    text-align: center
+    color: #FFFFFF
+    cursor: pointer
+
+@mixin before
+    position: absolute
+    left: -90px
+    bottom: -28px
+    font-family: 'Georgia'
+    font-weight: 400
+    font-size: 150px
+    color: rgba(1, 153, 109, 0.2)
+
+.container
+    width: 1369px
+    margin: 0 auto
+    &_1
+        width: 1506px    
+
+nav
+    position: fixed
+    top: 0
+    width: 100%
+    background-color: #fff
+    z-index: 1
+    a
+        font-family: $font_main
+        font-weight: 500
+        font-size: 20px
+        color: #292929
+        text-decoration: none  
+.logo_link
+    margin-right: 172px
+.nav
+    &__wrapper
+        min-height: 85px
+        display: flex
+        align-items: center
+    &__menu
+        display: flex
+        list-style: none    
+        margin-right: 211px 
+    &__item
+        margin-right: 72px
+    &__link 
+        text-align: center
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 500
+        font-size: 20px
+        color: #292929
+    &__sign-in
+        display: flex
+        justify-content: space-between
+        align-items: center  
+        a
+            margin-right: 31px
+
+
+.button
+    width: 183px
+    height: 51px
+    background: #01996D
+    border: 1px solid #01996D
+    border-radius: 4px
+    color: #fff
+    font-family: 'Lato'
+    font-weight: 400
+    font-size: 20px
+    cursor: pointer
+    &_promo
+        width: 227px
+        height: 65px
+            
+.promo
+    min-height: 895px
+    background: url(../img/main_bg.png) center center/cover no-repeat 
+    padding: 175px 0 336px 0
+    &__header
+        width: 440px
+        height: 148px
+        font-family: 'Georgia'
+        font-weight: 700
+        font-size: 65px
+        color: #01996D
+    &__descr
+        width: 420px
+        height: 123px
+        margin-top: 30px
+        line-height: 31px
+        color: #484848
+        font-family: $font_main
+        font-weight: 400
+        font-size: 20px
+    
+.work
+    min-height: 1600px
+    padding: 163px 0 51px 0
+    &_header
+        font-family: $font_main
+        font-weight: 600
+        font-size: 24px
+        color: #424242
+    &_subheader
+        display: flex
+        justify-content: space-between
+        &_header
+            display: flex
+            align-items: center
+            width: 584px
+            height: 158px
+            font-family: 'Georgia'
+            font-weight: 700
+            font-size: 50px
+            color: #01996D
+        &_descr
+            width: 671px
+            height: 269px
+            margin-top: 36px
+            font-family: $font_main
+            font-weight: 500
+            font-size: 20px
+            line-height: 150%
+            color: #424242
+    &_wrapper
+        display: flex
+        justify-content: space-between
+        margin-top: 53px
+    &_steps
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 492px
+        margin-right: 95px
+        &:nth-child(2)
+            align-items: flex-end
+        &_name
+            position: relative
+            font-family: 'Georgia'
+            font-weight: 700
+            font-size: 30px
+            text-align: center
+            color: #000000
+        &_name_1
+            &::before
+                content: '01'
+                @include before
+        &_name_2
+            margin-top: 242px
+            &::before
+                content: '02'
+                @include before
+        &_name_3
+            margin-top: 9px
+            &::before
+                content: '03'
+                @include before
+                transform: translateX(-20%)
+        &_descr
+            margin-top: 55px
+            font-family: $font_main
+            font-weight: 500
+            font-size: 20px
+            line-height: 150%
+            color: #424242
+            &_1
+                width: 382px
+            &_2
+                width: 392px
+            &_3
+                width: 402px
+        &_img
+            margin-top: 60px
+
+.story
+    min-height: 922px
+    background-color: #245852
+    padding: 229px 0 176px 0
+    &_wrapper
+        display: flex
+        justify-content: space-between
+    &_text
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &_header
+            font-family: 'Georgia'
+            font-weight: 700
+            font-size: 50px
+            line-height: 157%
+            color: #FFFFFF
+        &_descr
+            margin-top: 33px
+            font-family: $font_main
+            font-weight: 500
+            font-size: 25px
+            color: #FFFFFF
+        &_btn
+            width: 240px
+            height: 65px
+            margin-top: 57px
+            @include btn
+    &_video
+        position: relative
+        &_icon
+            position: absolute
+            left: 46%
+            bottom: 50%
+            transform: translateX(-50%)
+            transform: translateY(50%)
+
+.product
+    min-height: 936px
+    &_wrapper
+        padding-top: 120px
+    &_item
+        display: flex
+        justify-content: center
+        .product_square
+            position: relative
+            width: 640px
+            height: 573px
+            background-color: rgba(1, 153, 109, 0.2)
+            border-radius: 18px
+            img
+                display: block
+                margin: 0 auto
+            .product_mini-square
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                align-items: center
+                position: absolute
+                padding: 30px 0
+                bottom: -80px
+                left: -65px
+                width: 296px
+                height: 294px
+                background-color: #fff
+                border-radius: 4px 
+                box-shadow: -3px 3px 10px rgba(0,0,0,0.1)
+                h2
+                    font-family: 'Lato'
+                    font-weight: 600
+                    font-size: 14.49px
+                    text-align: center
+                .divider
+                    width: 110px
+                    height: 1px
+                    background-color: #000
+                .name
+                    font-family: 'Lato'
+                    font-weight: 400
+                    font-size: 12px
+                .content
+                    margin-top: 20px
+                    font-family: 'Georgia'
+                    font-weight: 700
+                    font-size: 15.9292px
+                li
+                    margin-top: 20px
+                    font-family: 'Lato'
+                    font-weight: 400
+                    font-size: 10.6195px
+                    line-height: 157%
+    .product_descr
+        margin-left: 80px
+        .label
+            font-family: 'Lato'
+            font-weight: 600
+            font-size: 25px
+            color: #424242
+        .product_subtitle
+            margin-top: 20px
+            font-family: 'Georgia'
+            font-weight: 700
+            font-size: 50px
+            line-height: 157%
+            color: #01996D
+        .product_text
+            margin-top: 40px
+            font-family: 'Lato'
+            font-weight: 400
+            font-size: 20px
+            line-height: 31px
+            color: #484848
+        .product_btn
+            margin-top: 40px
+            width: 227px
+            height: 65px
+            @include btn
